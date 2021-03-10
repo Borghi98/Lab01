@@ -24,4 +24,8 @@ public class Parole {
 		lista.clear();
 	}
 
+	public void removeParola(String parola) {
+		lista.remove(parola);
+		
+	}
 }

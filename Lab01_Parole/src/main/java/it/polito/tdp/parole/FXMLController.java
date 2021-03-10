@@ -31,6 +31,24 @@ public class FXMLController {
 
     @FXML
     private Button btnReset;
+    
+    @FXML
+    private Button btnCancella;
+    
+    @FXML
+    void doCancella(ActionEvent event) {
+    	String selected = txtResult.getSelectedText();
+    	
+    	elenco.removeParola(selected);
+    	
+    	txtResult.clear();
+    	String result ="";
+    	for ( String p : elenco.getElenco())
+    		result = result + p + "\n";
+    	txtResult.setText(result);
+    	
+
+    }
 
     @FXML
     void doInsert(ActionEvent event) {
